@@ -17,8 +17,8 @@ notifications:
     on_failure: always
 deploy:
   provider: pages
-  skip_cleanup: true
   cleanup: true
+  skip_history: true
   github_token: $GITHUB_TOKEN
   local_dir: dist/
   target_branch: gh-pages
