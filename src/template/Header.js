@@ -3,7 +3,7 @@ const Header = () => {
         <div class="header-main">
             <div class="header-logo">
                 <h1>
-                    <a href="/SPA-javascript-vanilla">
+                    <a href="/SPA-javascript-vanilla/">
                         100tifi.co
                     </a>
                 </h1>

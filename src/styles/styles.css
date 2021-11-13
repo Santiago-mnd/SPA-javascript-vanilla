@@ -1,20 +1,20 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #e1e1e1;
     color: #3c484e;
     font-family: 'Open Sans', sans-serif;
   }
   
   .header-main {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
   }
   
   .header a {
     text-decoration: none;
-    color: #15302C;
+    color: #2c2c2c;
   }
   
   .main {
@@ -25,27 +25,35 @@ body {
   }
   
   .characters {
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1.5rem;
-    grid-row-gap: 1.5em;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1rem;
     display: grid;
+    justify-items: center;
   }
-  
+
+  .characters a {
+    color: #2c2c2c;
+    text-decoration: none;
+    font-size: 12px;
+    text-align: center;
+  }
+
   .characters-inner {
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 1.5rem;
-    grid-row-gap: 1.5em;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
   }
   
   .characters-card {
-    text-decoration: none;
     box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
     border-radius: 5px;
     margin: 0 0 20px 0;
     display: block;
     animation-duration: 2s;
     animation-name: fade;
+    padding: 10px;
+    width: 320px;
   }
   
   .characters-card img {
@@ -67,35 +75,55 @@ body {
     margin: 20px;
   }
   
-  .characters-item {
-    text-decoration: none;
+  .character-item {
     box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
     border-radius: 5px;
     margin: 0 0 20px 0;
     display: block;
     animation-duration: 2s;
     animation-name: fade;
+    transition: transform .2s;
   }
   
-  .characters-item img {
+  
+  .character-item img {
     width: 100%;
     height: auto;
     border-radius: 5px 5px 0 0;
   }
-  
-  .characters-item h2 {
+
+  .character-item:hover {
+    transform: scale(1.1);
+  }
+
+  .character-item h2 {
     font-size: 18px;
     font-weight: 300;
     padding: 5px 10px;
+  }
+  
+  .error404 {
+    text-align: center;
+    font-size: 2rem;
+    height: 500px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .error404 span {
+    width: 300px;
+    height: 300px;
   }
   
-  .characters-item a {
-    text-decoration: none;
-    color: #026C86;
+  .error404 img {
+    width: 100%;
+    height: auto;
+    background: #d6d6d6;
+    border-radius: 50%;
   }
-  
+
   @keyframes fade {
     from {
       opacity: 0;
